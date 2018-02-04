@@ -5,6 +5,7 @@ import com.ryan.springboot.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -23,7 +24,7 @@ public class UserController {
     public String index() {
         return "redirect:/list";
     }
-
+    @ResponseBody
     @RequestMapping("/list")
     public List<User> list() {
         List<User> users=userService.getUserList();
