@@ -14,13 +14,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HelloWorldController {
-    /*@Value("${cupSize}")
-    private String cupSize;*/
-    @Autowired
-    private Girl girl;
 
     @RequestMapping("/hello")
     public String index() {
-        return girl.getAge().toString();
+        return "hello world";
     }
 }
